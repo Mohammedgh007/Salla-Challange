@@ -17,8 +17,18 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./src/*"]
+    "paths": { 
+      "@/validators/*": ["./src/business/validators/*"],
+      "@/rest/*": ["./src/infastructure/rest/*"],
+      "@/exceptions/*": ["./src/app/_exceptions/*"],
+      "@/requestDto/*": ["./src/data/requestDto/*"],
+      "@/models/*": ["./src/data/models/*"],
+      "@/context/*": ["./src/data/context/*"],
+      "@/DICoordinator": ["./src/dependencyInjectionHandler/DICoordinator"],
+      "@/Components/*": ["./src/presentation/components/*"],
+      "@/Layouts/*": ["./src/presentation/layouts/*"],
+      "@/Formatters/*": ["./src/presentation/formatters/*"],
+      "@/images/*": ["./public/images/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
