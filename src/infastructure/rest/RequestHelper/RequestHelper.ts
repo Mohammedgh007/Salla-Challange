@@ -26,13 +26,13 @@ export default class RequestsHelper implements IRequestHelper{
     /**
      * It handles sending post request for non-authenticated requests
      * @param {string} url 
-     * @param {Object} body stores key values as in {key: value, ...}
+     * @param {object} body stores key values as in {key: value, ...}
      * @throws this function may various functions thrown by throwMappedExcpetion
-     * @returns {Object} the response body
+     * @returns {object} the response body
      */
-    postData = async (url: string, body: Object): Promise<any> =>  { 
+    postData = async (url: string, body: object): Promise<any> =>  { 
         if (body == null || body == undefined)
-            body = new Object();
+            body = {};
         
         try {
             const rawResponse = await fetch(url, {
@@ -59,13 +59,13 @@ export default class RequestsHelper implements IRequestHelper{
     /**
      * It handles sending post request for non-authenticated requests
      * @param {string} url 
-     * @param {Object} query stores key values as in {key: value, ...}
+     * @param {object} query stores key values as in {key: value, ...}
      * @throws this function may various functions thrown by throwMappedExcpetion
-     * @returns {Object} the response body
+     * @returns {object} the response body
      */
-    getData = async (url: string, query: Object): Promise<any> =>  { 
-        let queryStr = this.formatQuery(query);
-        let finalizedStr = (queryStr) ? url + queryStr : url;
+    getData = async (url: string, query: object): Promise<any> =>  { 
+        const queryStr = this.formatQuery(query);
+        const finalizedStr = (queryStr) ? url + queryStr : url;
         
         try {
             const rawResponse = await fetch(finalizedStr, {
@@ -92,9 +92,9 @@ export default class RequestsHelper implements IRequestHelper{
      * @param query 
      * @returns {string}
      */
-    formatQuery = (query: Object): string => {
+    formatQuery = (query: object): string => {
         let queryStr = '?'
-        for(let [key, value] of Object.entries(query)) {
+        for(const [key, value] of Object.entries(query)) {
             if (queryStr == '?') { // first iteration.
                 queryStr += `${key}=${value}`;
             } else {

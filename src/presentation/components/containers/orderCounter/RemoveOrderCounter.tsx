@@ -1,12 +1,8 @@
 'use client';
 
-import PrimaryFillBtn from "@/Components/stateless/buttons/PrimaryFillBtn";
 import React, { Fragment, useState } from "react";
-import { useTranslations } from "next-intl";
 import { useAppContext } from "@/context/AppContext";
-import AddProductAction from "@/context/actions/AddProductAction";
 import { CartProductModel } from "@/models/cart/CartProductModel";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DeleteBtn from "@/Components/stateless/buttons/DeleteBtn";
 import RemoveProductAction from "@/context/actions/RemoveProductAction";
@@ -18,10 +14,9 @@ import RemoveProductAction from "@/context/actions/RemoveProductAction";
  * @returns 
  */
 export default function RemoveOrderCounter(props: IRemoveOrderCounterProps) {
-    const { state, dispatch } = useAppContext();
+    const { dispatch } = useAppContext();
     const [ count, setCount ] = useState(props.initialCount);
 
-    const t = useTranslations('');
     const handleRemoveProduct = () => {
         const removeAction = new RemoveProductAction(props.productCartModel.id)
         dispatch(removeAction)
@@ -48,12 +43,6 @@ export default function RemoveOrderCounter(props: IRemoveOrderCounterProps) {
             </div>
 
             <DeleteBtn handleClick={handleRemoveProduct}/>
-
-            <ToastContainer 
-                hideProgressBar={true}
-                autoClose={1000}
-                position="top-center"
-            />
 
         </Fragment>
 

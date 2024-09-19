@@ -43,9 +43,9 @@ export class CartProductModel {
 
     /**
      * It handles deserializing the object for local storage 
-     * @returns {Object} object map
+     * @returns {object} object map
      */
-    serializeToJson = (): Object => {
+    serializeToJson = (): object => {
         return {
             id: this.id,
             title: this.title,

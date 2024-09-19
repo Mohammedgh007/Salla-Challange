@@ -1,7 +1,6 @@
 'use client';
 
-import { CartProductModel } from "@/models/cart/CartProductModel";
-import React, { createContext, useContext, useMemo, useEffect, ReactNode, useReducer } from "react";
+import React, { createContext, useContext, useEffect, ReactNode, useReducer } from "react";
 import { SallaContextState } from "./SallaContextState";
 import { AppReducer, initialState} from "./AppReducer";
 import { IReducerAction } from "./actions/IReducerAction";

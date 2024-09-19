@@ -5,7 +5,7 @@ import TextFieldInput from "@/Components/stateless/inputs/TextFieldInput";
 import InvalidCredentialsException from "@/exceptions/InvalidCredentialsException";
 import ILoginValidator from "@/validators/LoginValidator/ILoginValidator";
 import { useTranslations } from "next-intl";
-import { redirect, RedirectType, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';

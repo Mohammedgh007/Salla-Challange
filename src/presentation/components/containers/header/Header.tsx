@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React from "react";
 import StoreLogoBranding from "../../stateless/branding/StoreLogoBranding";
 import { useAppContext } from "@/context/AppContext";
 import Link from "next/link";
@@ -11,7 +11,7 @@ import Link from "next/link";
  */
 export const Header = () => {
 
-    const { state, dispatch } = useAppContext();
+    const { state } = useAppContext();
     const cartUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/cart`
     const loginUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/login`
 

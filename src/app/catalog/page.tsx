@@ -3,7 +3,6 @@
 import { DICoordinator } from "@/DICoordinator";
 import { SearchProductsReqDto } from "@/requestDto/products/SearchProductsReqDto";
 import CatalogLayout from "@/Layouts/CatalogLayout";
-import CatalogValidator from "@/validators/CatalogValidator/CatalogValidator";
 import { ProductOverviewModel } from "@/models/products/ProductOverviewModel";
 import { useEffect, useState } from "react";
 import { ProductsCategoriesModel } from "@/models/products/ProductsCategoriesModel";

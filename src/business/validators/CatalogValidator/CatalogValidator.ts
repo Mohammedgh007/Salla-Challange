@@ -12,7 +12,7 @@ export default class CatalogValidator implements ICatalogValidator {
      * @param isSortingDesc 
      * @param translator should be a function that behaves similarly to i18n.t('key')
      */
-    validateSort(isSortingDesc: boolean, t: any): string {
+    validateSort(): string {
         return ''
     }
 
@@ -21,7 +21,7 @@ export default class CatalogValidator implements ICatalogValidator {
      * @param sortByOption 
      * @param translator should be a function that behaves similarly to i18n.t('key')
      */
-    validateCategory(category: string, t: any): string {
+    validateCategory(): string {
         return ''
     }
 

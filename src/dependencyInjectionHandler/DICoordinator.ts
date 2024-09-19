@@ -5,7 +5,6 @@ import { SrcDIHandler } from "./SrcDIHandler";
 
 import ProductRest from "@/rest/ProductRest/ProductRest";
 import RequestsHelper from "@/rest/RequestHelper/RequestHelper";
-import CatalogValidator from "@/validators/CatalogValidator/CatalogValidator";
 import { ISallaAppStateStorage } from "../infastructure/storage/SallaAppStateSorage/ISallaAppStateStorage";
 import ILoginValidator from "@/validators/LoginValidator/ILoginValidator";
 import { IAuthenticationRest } from "@/rest/AuthenticationRest/IAuthenticationRest";

@@ -1,6 +1,5 @@
 import { Header } from "@/Components/containers/header/Header";
 import { Footer } from "@/Components/stateless/Footer";
-import localFont from "next/font/local";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 import "../../app/globals.css";

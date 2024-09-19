@@ -19,7 +19,7 @@ export default function Login() {
             username,
             password
         }
-        const authToken = await authenticationRest.loginUser(loginReqDto)
+        await authenticationRest.loginUser(loginReqDto) // return authToken
         // store auth token for authenticated request.
     }
 

@@ -2,8 +2,8 @@ import LoginForm from "@/Components/containers/forms/LoginForm";
 import LoginBannerBranding from "@/Components/stateless/branding/LoginBannerBranding";
 import ILoginValidator from "@/validators/LoginValidator/ILoginValidator";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { useState } from "react";
+import Loading from "@/Components/stateless/Loading";
 
 
 /**
@@ -16,9 +16,9 @@ export default function LoginLayout(props: ILoginLayoutProps) {
     const handleSignIn = async (username: string, password:string) => {
         setIsLoading(true)
         
-        await props.handleSignIn(username, password)
-
-        setIsLoading(false)
+        await props.handleSignIn(username, password).finally(() => {
+            setIsLoading(false)
+        })
     }
 
     return (
@@ -42,9 +42,7 @@ export default function LoginLayout(props: ILoginLayoutProps) {
 
                     <LoginBannerBranding />
 
-                    <Link href="/another" locale="en">
-      To /fr/another
-    </Link>
+                    {isLoading && <Loading/>}
 
                 </div>
              </div>

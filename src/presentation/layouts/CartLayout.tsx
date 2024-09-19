@@ -1,6 +1,5 @@
 'use client';
 
-import RemoveOrderCounter from "@/Components/containers/orderCounter/RemoveOrderCounter";
 import PrimaryFillBtn from "@/Components/stateless/buttons/PrimaryFillBtn";
 import ProductCartCard from "@/Components/stateless/cards/ProductCartCard";
 import { useAppContext } from "@/context/AppContext";
@@ -13,7 +12,7 @@ import React from "react";
  */
 export default function CartLayout() {
     const t = useTranslations('');
-    const { state, dispatch } = useAppContext()
+    const { state } = useAppContext()
     
     let totalPrice = 0;
     state.cartProducts.forEach( (e) => {totalPrice += Number.parseFloat(e.price)})

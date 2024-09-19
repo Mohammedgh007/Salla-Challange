@@ -37,7 +37,7 @@ export default function SearchProductsForm(props: ISearchProductsFormProps) {
     const handleSelectSortOption = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const boolVal = ('1' == event.target.value) ? true : false
         setIsSortingDesc(boolVal)
-        setCategoryErrorMsg(props.validator.validateSort(boolVal, t))
+        setIsSortingDescErrorMsg(props.validator.validateSort(boolVal, t))
     }
 
     const handleSubmit = async () => {

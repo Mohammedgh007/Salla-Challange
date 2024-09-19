@@ -17,6 +17,8 @@ export const AppReducer = (state: SallaContextState, action: IReducerAction) => 
             return _handleRemoveCart(state, action)
         case initializeLoadedStateAction.typeName:
             return _handleInitLoadedState(state, action)
+        default:
+            return _getDeepCopyState(state)
     }
 };
 

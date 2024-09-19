@@ -1,5 +1,4 @@
 import { SearchProductsReqDto } from "@/requestDto/products/SearchProductsReqDto";
-import RequestsHelper from "../RequestHelper/RequestHelper";
 import { IRequestHelper } from "../RequestHelper/IRequestHelper";
 import { IProductRest } from "./IProductRest";
 import { ProductOverviewModel } from "@/models/products/ProductOverviewModel";

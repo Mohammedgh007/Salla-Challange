@@ -2,7 +2,7 @@
 
 import { ProductOverviewModel } from "@/models/products/ProductOverviewModel";
 import { ProductsCategoriesModel } from "@/models/products/ProductsCategoriesModel";
-import { Component, ReactNode, useState } from "react";
+import { useState } from "react";
 import CatalogBannerBranding from "@/Components/stateless/branding/CatalogBannerBranding";
 import ProductOverviewCard from "@/Components/stateless/cards/ProductOverviewCard";
 import PrimaryFillBtn from "@/Components/stateless/buttons/PrimaryFillBtn";

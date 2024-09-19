@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 
 /**
@@ -17,7 +17,7 @@ export default function DropdownFieldInput(props: IDropdownFieldInputProps) {
             <div className="flex flex-col items-start flex-1 w-full">
                 <select value={props.selectedValue} onChange={props.handleSelectOption} style={{marginBottom: (props.errorMsg) ? '0.3em' : ''}} className={`bg-white border text-md rounded-md ${borderColor} focus:ring-secondary-50 focus:border-secondary-50 block w-full px-2 py-1`}>
                     {props.optionsValues.map((optionVal, index) => 
-                        <option value={optionVal}> {props.optionsTexts[index]} </option>
+                        <option key={props.labelText + " " + index} value={optionVal}> {props.optionsTexts[index]} </option>
                         )
                     }
                 </select>

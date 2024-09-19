@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
  * @returns 
  */
 export default function AddOrderCounter(props: IAddOrderCounterProps) {
-    const { state, dispatch } = useAppContext();
+    const { dispatch } = useAppContext();
     const [ count, setCount ] = useState(0);
 
     const t = useTranslations('');

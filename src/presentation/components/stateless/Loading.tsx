@@ -1,7 +1,5 @@
-import React, { useState, CSSProperties } from "react";
-import ReactDOM from 'react-dom';
+import React, { CSSProperties } from "react";
 import BounceLoader from "react-spinners/BounceLoader";
-import { Portal } from 'react-portal';
 
 const override: CSSProperties = {
   display: "block",
