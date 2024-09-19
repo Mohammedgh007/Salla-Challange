@@ -1,12 +1,9 @@
 TODO:
 - Handle detecting internet connection exception.
 - Handle showing an alert when detecting internet disconnection.
-- support i18n languages and rtl
-- check common tags in layout to place them in root layout.
 - depends more on url for seo
-- add animation for apearing new items in search
+- add animation for appearing new items in search
 - verifies each file has a documentation.
-- remove useMemo comment in AppCOntext
 - reorganize file structure to remove a folder whose content is one file.
 - adding alert for all users actions
 - animation for adding a product.
